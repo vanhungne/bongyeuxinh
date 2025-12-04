@@ -1,0 +1,27 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.app-content {
+  width: 100%;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section Transitions */
+.section {
+  opacity: 1;
+  transform: translateY(0);
+  transition: var(--transition-smooth);
+}
+
+.section.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
