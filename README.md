@@ -94,8 +94,8 @@ src/
 
 ### Netlify
 1. Build command: `npm run build`
-2. Publish directory: `dist-react`
-3. Deploy
+2. Publish directory: `dist`
+3. Deploy (file `netlify.toml` đã được cấu hình sẵn)
 
 ## 📝 License
 
