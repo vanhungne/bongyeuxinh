@@ -83,23 +83,6 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
     }
   }
 
-  const heartVariants = {
-    animate: {
-      scale: [1, 1.3, 1],
-      rotate: [0, 10, -10, 0],
-      filter: [
-        'drop-shadow(0 0 10px rgba(245, 208, 138, 0.5))',
-        'drop-shadow(0 0 30px rgba(245, 208, 138, 0.8))',
-        'drop-shadow(0 0 10px rgba(245, 208, 138, 0.5))'
-      ],
-      transition: {
-        duration: 1.5,
-        repeat: Infinity,
-        ease: 'easeInOut' as const
-      }
-    }
-  }
-
   return (
     <motion.div
       className="loading-screen"
