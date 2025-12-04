@@ -18,7 +18,7 @@ function App() {
     // Backup timer - ensure loading completes even if LoadingScreen doesn't call onComplete
     const backupTimer = setTimeout(() => {
       setIsLoading(false)
-    }, 2000)
+    }, 6000)
 
     return () => clearTimeout(backupTimer)
   }, [])

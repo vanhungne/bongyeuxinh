@@ -11,11 +11,11 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
   const [stage, setStage] = useState(1)
 
   useEffect(() => {
-    // Ensure loading completes after maximum 1.5 seconds
+    // Ensure loading completes after maximum 5 seconds
     const maxLoadingTimer = setTimeout(() => {
       setProgress(100)
-      setTimeout(onComplete, 200)
-    }, 1500)
+      setTimeout(onComplete, 500)
+    }, 5000)
 
     const interval = setInterval(() => {
       setProgress(prev => {
@@ -24,7 +24,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
           return 100
         }
         
-        const next = prev + Math.random() * 15 + 5
+        const next = prev + Math.random() * 8 + 3
         
         if (next >= 100) {
           clearInterval(interval)
@@ -146,23 +146,25 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
             />
           </svg>
           
-          <motion.div className="monogram-text" variants={heartVariants} animate="animate">
-            <span className="initial">B</span>
+          <motion.div className="monogram-text" style={{ fontSize: '1.2rem', letterSpacing: '2px' }}>
             <motion.span 
-              className="heart"
+              style={{ 
+                display: 'inline-block',
+                fontFamily: 'var(--font-sans)',
+                fontWeight: 600
+              }}
               animate={{ 
-                scale: [1, 1.3, 1],
-                color: ['#F5D08A', '#FFD700', '#F5D08A']
+                scale: [1, 1.05, 1],
+                opacity: [0.9, 1, 0.9]
               }}
               transition={{ 
-                duration: 1, 
+                duration: 2, 
                 repeat: Infinity,
-                repeatType: 'reverse'
+                ease: 'easeInOut'
               }}
             >
-              ♥
+              Third.ec
             </motion.span>
-            <span className="initial">L</span>
           </motion.div>
         </motion.div>
 
