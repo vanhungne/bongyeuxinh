@@ -120,7 +120,7 @@ const GiftSection = () => {
               onClick={(e) => e.stopPropagation()}
             >
               <video
-                src="/assets/video/surprise.mp4"
+                src="/video/surprise.mp4"
                 controls
                 autoPlay
                 style={{ width: '100%', display: 'block' }}
